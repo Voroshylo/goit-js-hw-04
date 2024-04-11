@@ -212,3 +212,102 @@
 //   return total
 // }
 // console.log(calculateTotalPrice([12, 85, 37, 4]))
+
+
+// Функція createReversedArray() може приймати довільну кількість аргументів. Доповни код функції так, щоб вона повертала масив усіх аргументів, але в масиві вони повинні йти у зворотному порядку. Тобто, при виклику createReversedArray(1, 2, 3), функція має повернути масив [3, 2, 1]. Використовуй цикл або метод масиву toReversed(), який застосовується до масиву і результатом роботи повертає новий масив з елементами у зворотньому порядку.
+// Оголошена функція createReversedArray()
+// Виклик функції createReversedArray(12, 85, 37, 4) повертає [4, 37, 85, 12]
+// Виклик функції createReversedArray(164, 48, 291) повертає [291, 48, 164]
+// Виклик функції createReversedArray(412, 371, 94, 63, 176) повертає [176, 63, 94, 371, 412]
+// Виклик функції createReversedArray() повертає []
+// function createReversedArray() {
+//   let arr = Array.from(arguments)
+//   return arr.toReversed()
+// }
+// console.table(createReversedArray(12, 85, 37, 4))
+
+
+// Функція calculateTax(amount, taxRate) оголошує два параметри:
+// amount - число, сума від якої потрібно обчислити податок. Обов'язковий параметр.
+// taxRate - число, податкова ставка. Необов'язковий параметр. За замовчуванням його значення має бути 0.2.
+// Доповни код функції так, щоб вона повертала суму податку - результат множення суми на податкову ставку.
+// Оголошена функція calculateTax(amount, taxRate)
+// Виклик функції calculateTax(100, 0.1) повертає 10
+// Виклик функції calculateTax(200, 0.1) повертає 20
+// Виклик функції calculateTax(100, 0.2) повертає 20
+// Виклик функції calculateTax(200, 0.2) повертає 40
+// Виклик функції calculateTax(100, 0.3) повертає 30
+// Виклик функції calculateTax(200, 0.3) повертає 60
+// Виклик функції calculateTax(100) повертає 20
+// Виклик функції calculateTax(200) повертає 40
+// function calculateTax(amount, taxRate = 0.2) {
+//   const result = amount * taxRate;
+//   return result
+// }
+// console.log(calculateTax(100))
+// console.log(calculateTax(200, 0.3))
+
+
+// Перш, ніж розв’язувати задачу, давай визначимося із новим терміном!
+// Термін slug — це зрозумілий людині унікальний ідентифікатор, який використовується у веб розробці для створення читабельних URL-адрес.
+// Наприклад, замість того, щоб користувач побачив в адресному рядку mysite.com/posts/1q8fh74tx, можна зробити slug із назви статті. У результаті адреса буде приємнішою для сприйняття: mysite.com/posts/arrays-for-begginers.
+// Slug — це завжди рядок у нижньому регістрі, слова якого розділені тире.
+// З цим розібралися? А тепер давай нарешті виконувати задачу!
+// Напиши функцію slugify(title), яка приймає заголовок статті, параметр title і повертає slug, створений із цього рядка.
+// Значенням параметра title будуть рядки, слова яких розділені лише пробілами.
+// Усі символи slug повинні бути в нижньому регістрі.
+// Усі слова slug повинні бути розділені тире.
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+
+// function slugify(title) {
+//   const slug = title.toLowerCase().split(" ").join("-");
+//   return slug;
+// }
+
+// console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+// console.log(slugify("English for developer")); // "english-for-developer"
+// console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+// console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
+
+
+// Напиши функцію під назвою makeArray, яка приймає три параметри: firstArray (масив), secondArray (масив) і maxLength (число). Функція повинна створювати новий масив, який містить усі елементи з firstArray, а потім усі елементи з secondArray.
+
+// Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною maxLength елементів.
+// В іншому випадку функція повинна повернути весь новий масив.
+
+
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   let arr = firstArray.concat(secondArray)
+//   return arr.slice(0, maxLength)
+// }
+
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+// console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+
+
+// Напиши функцію filterArray(numbers, value), яка приймає масив чисел (numbers) та значення (value) як параметри. Функція повинна повертати новий масив лише тих чисел із масиву numbers, які більші за значення value.
+// Усередині функції:
+// Створи порожній масив, у який будеш додавати підходящі числа.
+// Використай цикл для ітерації кожного елемента масиву numbers.
+// Використовуй умовний оператор if усередині циклу для перевірки кожного елемента и додавання до свого масиву.
+// Поверни свій новий масив з підходящими числами як результат.
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+
+function filterArray(number, value) {
+  let total = []
+  for (let i = 0; i >= value; i++){
+    if 
+  }
+}
+
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
