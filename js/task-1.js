@@ -299,15 +299,275 @@
 // Поверни свій новий масив з підходящими числами як результат.
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
 
-function filterArray(number, value) {
-  let total = []
-  for (let i = 0; i >= value; i++){
-    if 
-  }
-}
+// function filterArray(number, value) {
+//   let total = []
+//   for (let i = 0; i < number.length; i++){
+//     if (number[i] > value) {
+//       total.push(number[i])
+//     }
+//   }
+//   return total
+// }
 
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+// function dualNumber(numbers) {
+//   let total = 0;
+//   for (const number of numbers) {
+//   total += number
+//   }
+//   return total
+// }
+// console.log(dualNumber([1, 2, 3, 4, 5, 6]))
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   console.log(key); // Ключ
+//   console.log(book[key]);  // Значення властивості з таким ключем
+// }
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key])
+// }
+// console.log(keys)
+
+// Виконай рефакторинг функції countProps(object), замінивши перебір ключів за допомогою циклу for…in на метод Object.keys() для отримання масиву властивостей. Функція має повернути кількість властивостей в об'єкті object.
+
+// Оголошена функція countProps(object)
+// Виклик countProps({}) повертає 0
+// Виклик countProps({ name: "Mango", age: 2 }) повертає 2
+// Виклик countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) повертає 3
+// Функція використовує метод Object.keys()
+// function countProps(object){
+//   let value = []
+//   const keys = Object.keys(object)
+//   for (let key of keys) {
+//     value.push(object[key])
+//   }
+// }
+// console.log(countProps({ name: "Mango", age: 2 }))
+
+// Функція countTotalSalary(salaries) приймає об'єкт зарплат (salaries) в якості параметра. Кожна властивість об'єкта salaries — це ключ, що містить ім'я співробітника, та значення - його відповідна зарплатня.
+// Доповни код функції countTotalSalary(salaries) так, щоб вона повертала загальну суму зарплат всіх співробітників.
+// Поради:
+// Ініціалізуй змінну totalSalary зі значенням 0, яка буде відповідати за загальну суму зарплат усіх співробітників
+// Використай метод Object.values() для отримання значень (зарплат) з об'єкта salaries
+// Пройдись по отриманих значеннях за допомогою циклу та додай кожне значення до змінної totalSalary.
+// Поверни totalSalary як результат
+// Оголошена функція countTotalSalary(salaries)
+// Виклик countTotalSalary({}) повертає 0
+// Виклик countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) повертає 330
+// Виклик countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) повертає 400
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const values = Object.values(salaries)
+//   for (const value of values) {
+//     totalSalary += value
+//   }
+//   return totalSalary
+// }
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }))
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   }
+// ];
+// let totalRating = 0
+// for (const book of books) {
+//   totalRating += book.rating
+// }
+// console.log(totalRating)
+// console.log()
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// for(const color of colors){
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb)
+// }
+// console.log(hexColors)
+// console.log(rgbColors)
+
+// const books = [
+//   { title: "The Last Kingdom", author: "Bernard Cornwell" },
+//   { title: "Beside Still Waters", author: "Robert Sheckley" },
+//   { title: "The Dream of a Ridiculous Man", author: "Fyodor Dostoevsky" }
+// ];
+
+// const authorToSearchFor = "RoberSheckley";
+
+// for (const book of books) {
+//   if (book.author === authorToSearchFor) {
+//     console.log(book);
+//     console.log(book.title)
+//     console.log(book.rating)
+//   } else {
+//     console.log("а ні хуя")
+//   }
+// }
+
+
+// Функція getProductPrice(productName) приймає один параметр productName - назва продукту. Функція містить масив об'єктів products з такими властивостями, як name — ім'я товару, price — ціна і quantity — кількість.
+// Доповни код функції так, щоб вона шукала об'єкт продукту з певним ім'ям (властивість name) в масиві products і повертала його ціну (властивість price). Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
+// Оголошена функція getProductPrice(productName).
+// Виклик getProductPrice("Radar") повертає 1300.
+// Виклик getProductPrice("Grip") повертає 1200.
+// Виклик getProductPrice("Scanner") повертає 2700.
+// Виклик getProductPrice("Droid") повертає 400.
+// Виклик getProductPrice("Engine") повертає null.
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+// let searchName = productName;
+// for (const product of products) {
+//   if (product.name === searchName) {
+//     return product.price
+//   }
+//   }
+//   return null
+//   }
+// console.log(getProductPrice("Radar"))
+// console.log(getProductPrice("Scanner"))
+// console.log(getProductPrice("Droi"))
+
+// Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості. Функція повинна повернути масив усіх значень властивості з таким ім'ям з кожного об'єкта в масиві products. Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
+// Оголошена функція getAllPropValues(propName)
+// Виклик getAllPropValues("name") повертає ["Radar", "Scanner", "Droid", "Grip"]
+// Виклик getAllPropValues("quantity") повертає [4, 3, 7, 9]
+// Виклик getAllPropValues("price") повертає [1300, 2700, 400, 1200]
+// Виклик getAllPropValues("category") повертає []
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   const keys = [];
+// for (const product of products) {
+//   if (propName in product) {
+//    keys.push(product[propName]);
+// }
+//   }
+//   return keys
+//   }
+// console.log(getAllPropValues("name"))
+// console.log(getAllPropValues("pric"))
+
+
+// Функція calculateTotalPrice(productName) приймає один параметр productName- назва товару. Функція містить масив об'єктів products з такими властивостями, як name — ім'я товару, price — ціна і quantity — кількість.
+// Доповни код функції так, щоб вона повертала загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products.
+// Якщо продукту з такою назвою немає, то функція повинна повертати рядок "Product <productName> not found!" , де <productName> — це ім'я товару.
+// Оголошена функція calculateTotalPrice(productName)
+// Виклик calculateTotalPrice("Blaster") повертає "Product Blaster not found!"
+// Виклик calculateTotalPrice("Radar") повертає 5200
+// Виклик calculateTotalPrice("Droid") повертає 2800
+// Виклик calculateTotalPrice("Grip") повертає 10800
+// Виклик calculateTotalPrice("Scanner") повертає 8100
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   let totalPrice = 0
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       totalPrice += product.price * product.quantity;
+//       return totalPrice
+//     }
+//   }
+//   return `Product ${productName} not found!`
+  
+// }
+// console.log(calculateTotalPrice("Radar"))
+// console.log(calculateTotalPrice("Grip"))
+
+// До нас звернулася власниця крамниці зілля «У старої жаби» і замовила програму для ведення інвентарю. Програма має додавати, видаляти, шукати та оновлювати зілля.
+// Оголоси об'єкт atTheOldToad з наступними властивостями:
+// potions — масив, де будуть зберігатися зілля. Нехай зараз він буде порожнім
+// getPotions() — метод, який повертає рядок "List of all available potions"
+// addPotion(potionName) — метод, який повертає рядок "Adding <potionName>", де potionName — це значення параметра potionName
+// Оголошена змінна atTheOldToad
+// Значення змінної atTheOldToad - це об'єкт
+// Значення властивості potions - це масив []
+// Значення властивості getPotions - це метод об'єкта
+// Виклик методу atTheOldToad.getPotions() повертає рядок "List of all available potions"
+// Значення властивості addPotion - це метод об'єкта
+// Виклик методу atTheOldToad.addPotion("Invisibility") повертає рядок "Adding Invisibility"
+// Виклик методу atTheOldToad.addPotion("Power potion") повертає рядок "Adding Power potion"
+// const atTheOldToad = {
+//   potion: [],
+//   getPotions() {
+//     return "List of all available potions";
+//   },
+//   addPotion(potionName) {
+//     return `Adding ${potionName}`
+//   },
+// };
+// console.log(atTheOldToad.getPotions())
+// console.log(atTheOldToad.addPotion("Invisibility"))
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Stone skin", price: 520 },
+  ],
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    this.potions.push(newPotion);
+  },
+  getTotalPrice() {
+    let totalPrice = 0;
+    for (const potion of this.potions) {
+      totalPrice += potion.price;
+    }
+    return totalPrice;
+  },
+};
+console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }))
+console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }))
+console.log(atTheOldToad.getTotalPrice())
