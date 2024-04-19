@@ -726,9 +726,70 @@
 // }
 // console.log(filterArray([1, 2, 3, 4, 5], 3))
 // console.log(filterArray([12, 24, 8, 41, 76], 20))
-const numbers = [5, 10, 15, 20, 25];
+// const numbers = [5, 10, 15, 20, 25];
 
-const logMessage = (number) => console.log(number)
+// const logMessage = (number) => console.log(number)
 
-numbers.forEach(logMessage);
+// numbers.forEach(logMessage);
 
+// function greet(name) {
+//   console.log(`Hello, ${name}! I am ${this.person}`);
+// }
+
+// const person = "John";
+// const context = {
+//   person: "Alice"
+// };
+
+// greet.call(context, "sergey");
+// class Car {
+//   #brand;
+//   #model;
+//   #price;
+
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.#model = params.model;
+//     this.#price = params.price;
+//   }
+//   get brand() {
+//   return this.#brand
+//   }
+//   get model() {
+//     return this.#model
+//   }
+//   get price() {
+//     return this.#price
+//   }
+//   set brand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+//   set model(newModel){
+//     this.#model = newModel
+//   }
+//   set price(newPrice) {
+//     this.#price = newPrice
+//   }
+// }
+
+
+// class Car {
+//   static #maxPrice = 50000;
+//   static checkPrice(price) {
+//     if (price <= this.#maxPrice) {
+//       return "Success! Price is within acceptable limits"
+//     } else {
+//       return "Error! Price exceeds the maximum"
+//     }
+//   }
+
+//   constructor(params) {
+//     this.price = params.price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
